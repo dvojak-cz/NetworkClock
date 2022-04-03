@@ -1,3 +1,4 @@
 [submodule "TimeChanger"]
 	path = TimeChanger
 	url = git@gitlab.fit.cvut.cz:trojaj12/timechanger.git
+	ignore = dirty
