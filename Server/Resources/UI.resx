@@ -44,7 +44,7 @@ q quit</value>
         <value>This action is not enabled.</value>
     </data>
     <data name="UserInterface_SetTime_Runnig_process_failed_" xml:space="preserve">
-        <value>Running process failed.</value>
+        <value>Faild to execute operation.</value>
     </data>
     <data name="UserInterface_SetTime_Prces_exited_with_failure_" xml:space="preserve">
         <value>Process exited with failure.</value>

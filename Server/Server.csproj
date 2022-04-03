@@ -14,12 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="config.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
-
-    <ItemGroup>
       <EmbeddedResource Update="Resources\UI.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>UI.Designer.cs</LastGenOutput>

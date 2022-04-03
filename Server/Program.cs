@@ -1,4 +1,6 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using Server.Records;
 using Server.Resources;
@@ -13,7 +15,7 @@ public static class Program
 	private static Config LoadConfig()
 	{
 		string json;
-		using (StreamReader r = new("config.json"))
+		using (StreamReader r = new("/etc/NetworkClock.json"))
 		{
 			json = r.ReadToEnd();
 		}
