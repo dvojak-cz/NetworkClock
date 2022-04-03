@@ -1,14 +1,15 @@
-# Instalace a používání (docker)
+# NetworkClock
+Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde se nachází tento soubor
+
+## Instalace a používání (docker)
 ```
 # docker build -t network_clock .
 # docker run -it --rm --privileged -- network_clock
 ```
 
 
-# Instalace a používání (lokálně)
-Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde se nachází tento soubor
-
-## Potřebné prerekvizity
+## Instalace a používání (lokálně)
+### Potřebné prerekvizity
 - DLL: `WhiteListCaps.so`
   - Toto DLL musí být při spuštění aplikace nalezitelné operačnímsystémem (například v `/etc/lib`)
   ```
@@ -29,7 +30,7 @@ Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde
   # TimeChanger/src/SetSUID.sh #Nastavý potřebná práva
   ```
 
-## Vytvoření a spuštění aplikace
+### Vytvoření a spuštění aplikace
 ```
 dotnet run --configuration Release --project Server/
 ```
