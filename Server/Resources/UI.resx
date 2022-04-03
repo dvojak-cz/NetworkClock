@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="UserInterface_Loop_Command__h_for_help" xml:space="preserve">
+        <value>Command (h for help): </value>
+    </data>
+    <data name="UserInterface_EvaluateCommand_Menu" xml:space="preserve">
+        <value>h help
+s set time
+g get time
+f set format
+q quit</value>
+    </data>
+    <data name="UserInterface_EvaluateCommand_Invalid_input" xml:space="preserve">
+        <value>Invalid input.</value>
+    </data>
+    <data name="UserInterface_SetFormat_Specify_the_format" xml:space="preserve">
+        <value>Specify the format: </value>
+    </data>
+    <data name="UserInterface_SetFormat_Format_has_been_set" xml:space="preserve">
+        <value>Format has been set.</value>
+    </data>
+    <data name="UserInterface_SetTime_Invalid_format" xml:space="preserve">
+        <value>Invalid format.</value>
+    </data>
+    <data name="UserInterface_SetTime_This_acction_is_not_enabled_" xml:space="preserve">
+        <value>This action is not enabled.</value>
+    </data>
+    <data name="UserInterface_SetTime_Runnig_process_failed_" xml:space="preserve">
+        <value>Running process failed.</value>
+    </data>
+    <data name="UserInterface_SetTime_Prces_exited_with_failure_" xml:space="preserve">
+        <value>Process exited with failure.</value>
+    </data>
+    <data name="UserInterface_ValidateInput_Invalid_input" xml:space="preserve">
+        <value>Invalid input.</value>
+    </data>
+    <data name="UserInterface_SetTime_Please_enter_the_date_you_want_to_set" xml:space="preserve">
+        <value>Please enter the date you want to set in valid format (e.q. yyyy-MM-dd dd:mm:ss): </value>
+    </data>
+    <data name="Program_Main_App_failed_to_run_safely" xml:space="preserve">
+        <value>App failed to run safely.</value>
+    </data>
+</root>
