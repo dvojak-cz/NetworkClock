@@ -1,4 +1,11 @@
-# Instalace a používání
+# Instalace a používání (docker)
+```
+# docker build -t network_clock .
+# docker run -it --rm --privileged -- network_clock
+```
+
+
+# Instalace a používání (lokálně)
 Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde se nachází tento soubor
 
 ## Potřebné prerekvizity
@@ -6,7 +13,7 @@ Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde
   - Toto DLL musí být při spuštění aplikace nalezitelné operačnímsystémem (například v `/etc/lib`)
   ```
   $ make -C TimeChanger/src/ WhiteListCaps.so
-  # cp WhiteListCaps.so /usr/lib/
+  # cp TimeChanger/src/WhiteListCaps.so /usr/lib/
   # chmod 755 /usr/lib/WhiteListCaps.so
   ```
 - Konfigurační soubor: `/etc/NetworkClock.json`
@@ -18,8 +25,8 @@ Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde
 - Spustitelná aplikace: `ChangeTime`
   ```
   $ make -C TimeChanger/src/ ChangeTime
-  # chmod +x SetSUID.sh
-  # ./SetSUID.sh #Nastavý potřebná práva
+  # chmod +x TimeChanger/src/SetSUID.sh
+  # TimeChanger/src/SetSUID.sh #Nastavý potřebná práva
   ```
 
 ## Vytvoření a spuštění aplikace
