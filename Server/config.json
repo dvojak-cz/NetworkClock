@@ -1,0 +1,10 @@
+{
+  "Network": {
+    "Enable": false,
+    "Port": 5555
+  },
+  "TimeChanger": {
+    "Enable": true,
+    "ChangeTimeBin": "/home/jan/CLionProjects/untitled3/ChangeTime"
+  }
+}
