@@ -1,6 +1,7 @@
 # NetworkClock
 Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde se nachází tento soubor
 
+Aby aplikace spávně běžela, pak na systému nesmí běžet žádný deamon, který synchornizuje čas. 
 ## Instalace a používání (docker)
 ```
 # docker build -t network_clock .
@@ -33,4 +34,13 @@ Všechy ukázané příkazy jsou prováděny "root" složce řešení - tam, kde
 ### Vytvoření a spuštění aplikace
 ```
 dotnet run --configuration Release --project Server/
+```
+---
+## Klient
+Server reahuje na `GET HTTP` požadavky. Příjmá parametr format, který určuje požadovaný formát odpovědi. Jako klient lze využí nástroj `curl`
+
+Příklady požadavků:
+```
+$ curl 'http://localhost:<port>'
+$ curl 'http://localhost:<port>?format=<format>' 
 ```
