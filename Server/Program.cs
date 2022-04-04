@@ -30,11 +30,7 @@ public static class Program
 		try
 		{
 			// Set capabilities to 0000000000000000
-			if (WhiteListCapabilities(IntPtr.Zero, 0) != 0)
-			{
-				Console.WriteLine(UI.Program_Main_App_failed_to_run_safely);
-				return false;
-			}
+			WhiteListCapabilities(IntPtr.Zero, 0);
 		}
 		catch (DllNotFoundException e)
 		{
