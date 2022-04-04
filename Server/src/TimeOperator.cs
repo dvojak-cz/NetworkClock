@@ -6,7 +6,7 @@ namespace Server;
 
 public class TimeOperator
 {
-	public static DateTime GetTime() => DateTime.Now;
+	public static DateTime GetTime => DateTime.Now;
 	private readonly Config _config;
 
 	public TimeOperator(Config config)

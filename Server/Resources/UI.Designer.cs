@@ -116,5 +116,11 @@ namespace Server.Resources {
                 return ResourceManager.GetString("Program_Main_App_failed_to_run_safely", resourceCulture);
             }
         }
+        
+        internal static string UserInterface_EvaluateCommand_Stopping_server {
+            get {
+                return ResourceManager.GetString("UserInterface_EvaluateCommand_Stopping_server", resourceCulture);
+            }
+        }
     }
 }

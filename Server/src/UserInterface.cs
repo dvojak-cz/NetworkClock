@@ -24,8 +24,11 @@ public class UserInterface
 	/// </summary>
 	private readonly TimeOperator _timeOperator;
 
-	public UserInterface(Config conf)
+	private readonly Server? _server;
+
+	public UserInterface(Config conf, Server? server = null)
 	{
+		_server = server;
 		_format = Formats.DEFAULT_DATE_FORMAT;
 		_end = false;
 		_timeOperator = new TimeOperator(conf);
@@ -67,7 +70,7 @@ public class UserInterface
 				break;
 			// Displays time to user
 			case Enums.Commands.GET:
-				Console.WriteLine(TimeOperator.GetTime().ToString(_format));
+				Console.WriteLine(TimeOperator.GetTime.ToString(_format));
 				break;
 			// Sets new date format 
 			case Enums.Commands.FORMAT:
@@ -75,7 +78,9 @@ public class UserInterface
 				break;
 			// Exits application
 			case Enums.Commands.QUIT:
+				_server?.Stop();
 				_end = true;
+				Console.WriteLine(UI.UserInterface_EvaluateCommand_Stopping_server);
 				break;
 			default:
 				Console.WriteLine(UI.UserInterface_EvaluateCommand_Invalid_input);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using Server.Records;
@@ -23,9 +24,8 @@ public static class Program
 		var items = JsonConvert.DeserializeObject<Config>(json);
 		return items!;
 	}
-
-
-	public static int Main()
+	
+	private static bool GiveUpCapabilities()
 	{
 		try
 		{
@@ -33,30 +33,52 @@ public static class Program
 			if (WhiteListCapabilities(IntPtr.Zero, 0) != 0)
 			{
 				Console.WriteLine(UI.Program_Main_App_failed_to_run_safely);
-				return 0;
+				return false;
 			}
 		}
 		catch (DllNotFoundException e)
 		{
 			Console.WriteLine(e.Message);
-			return 1;
+			return false;
 		}
 
+		return true;
+	}
+
+	private static Config? GetConfig()
+	{
 		Config config;
 		try
 		{
-			config = LoadConfig();
+			return LoadConfig();
 		}
 		catch (Exception e)
 		{
 			Console.WriteLine(e);
+			return null;
+		}
+	}
+
+	public static async Task<int> Main()
+	{
+		if (!GiveUpCapabilities())
 			return 1;
+
+		var config = GetConfig();
+		if (config is null)
+			return 1;
+
+		Server? s = null;
+		if (config.Network.Enable)
+		{
+			s = new (config);
+			s.Listen();
 		}
 
-		UserInterface ui = new(config);
+
+		UserInterface ui = new(config, s);
 		ui.Loop();
-
-
+		s?.Dispose();
 		return 0;
 	}
 }

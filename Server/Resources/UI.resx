@@ -58,4 +58,7 @@ q quit</value>
     <data name="Program_Main_App_failed_to_run_safely" xml:space="preserve">
         <value>App failed to run safely.</value>
     </data>
+    <data name="UserInterface_EvaluateCommand_Stopping_server" xml:space="preserve">
+        <value>Stopping server... (wait for connection close or timeout)</value>
+    </data>
 </root>
