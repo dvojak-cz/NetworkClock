@@ -10,7 +10,7 @@ namespace Server;
 
 public static class Program
 {
-	[DllImport("WhiteListCaps.so", EntryPoint = "WhiteListCapabilities")]
+	[DllImport("WhiteListCaps.so", EntryPoint = "WhiteListCapabilities", CallingConvention = CallingConvention.Winapi)]
 	private static extern int WhiteListCapabilities(IntPtr array, int len);
 
 	private static Config LoadConfig()
@@ -55,7 +55,7 @@ public static class Program
 		}
 	}
 
-	public static async Task<int> Main()
+	public static int Main()
 	{
 		if (!GiveUpCapabilities())
 			return 1;
