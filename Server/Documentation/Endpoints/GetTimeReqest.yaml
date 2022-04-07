@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: GetTimeRequest
+  description: GetTimeRequest
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:5555/'
+paths:
+  /:
+    get:
+      summary: "Get servers system time"
+      parameters:
+        - in: "query"
+          name: "format"
+          description: "Format of datetime"
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
